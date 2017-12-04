@@ -31,5 +31,6 @@ resultsNumpy = np.asfarray(resultsNumpyStrings,float)
 
 plt.figure(figsize=(9,6))
 plt.hist(resultsNumpy,bins= np.arange(-25.5,150.5,1))
-plt.title('Scores of 238 games of 6f274ab, positive = black win')
+plt.title('Scores of %d games of 6f274ab, positive = black win' % resultsNumpy.size)
 plt.show()
+#%%
