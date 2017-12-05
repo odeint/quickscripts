@@ -44,7 +44,7 @@ for network in ['6f274ab1','22373747','92c658d7','a1151640']:
     myfig = plt.figure(figsize=(9,6))
     #plt.hist(networkresults,bins= np.arange(-400.5,400.5,1))
     plt.hist(networkresults,bins= np.arange(-90.5,90.5,1))
-    plt.title('Scores of %d games from \'all.sgf.xz\' dated 05-Dec-2017 10:34\nNetwork: %s, positive = black win' % (networkresults.size,network) )
+    plt.title('Scores of %d games from \'all.sgf.xz\' dated 05-Dec-2017 10:34\nNetwork: %s, positive = black win, white win perc. %.2f' % (networkresults.size,network,np.count_nonzero((networkresults < 0))/networkresults.size*100) )
     #plt.title('Scores of %d games from \'all.sgf.xz\' dated 05-Dec-2017 10:34\nNetwork: %s, positive = black win, resign mapped to +/- 400' % (networkresults.size,network) )
     #plt.yscale('log', nonposy='clip')
     plt.show()
